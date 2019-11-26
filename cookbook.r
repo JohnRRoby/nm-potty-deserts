@@ -15,7 +15,7 @@ pottyViz <- merge(housing17, plumbing17)
 pottyViz <- pottyViz %>%
 	mutate(noPlumb_perc = no_plumb_estimate / housing_units_estimate * 100)
 
-#read in geoJSON data to allow the mapping. I got the file <a href="https://eric.clst.org/tech/usgeojson/" target="_blank">from this site</a>. This makes a SpatialPolygonDataFrame, which is like if a list and a dataframe hooked up. We also need to subset down to just New Mexico counties.
+#read in geoJSON data to allow the mapping. I got the file from this site: https://eric.clst.org/tech/usgeojson/ . This makes a SpatialPolygonDataFrame, which is like if a list and a dataframe hooked up. We also need to subset down to just New Mexico counties.
 counties <- geojson_read("us_counties_5m.geojson", what = "sp")
 counties <- subset(counties, STATE == "35" & LSAD == "County")
 
