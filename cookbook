@@ -4,7 +4,7 @@ library(leaflet)
 library(maps)
 library(htmltools)
 library(geojsonio)
-library(sp)#this is called later on but i specify it here because later on we'll need the `merge` function from this package, not the base one.
+library(sp)#this is called later on but i specify it here because later on we'll need the `merge`           function from this package, not the base one.
 library(htmlwidgets) #for export as interactive widget
 library(mapview)#used to export dataviz as a static image, completely optional
 
